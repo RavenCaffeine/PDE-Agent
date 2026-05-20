@@ -1,0 +1,32 @@
+task:
+  id: 2
+  name: task2_burgers_multi_nu
+  input_steps: 10
+  total_steps: 200
+  spatial_size: 256
+data:
+  train_path: ../data/task2_train.hdf5
+  val_path: ../data/task2_val.hdf5
+  test_path: ../data/task2_test.hdf5
+  batch_size: 8
+  num_workers: 0
+  max_train_samples: null
+  max_val_samples: null
+model:
+  hidden_channels: 96
+  modes: 48
+  depth: 5
+  dropout: 0.05
+loss:
+  spectral_weight: 0.03
+  physics_weight: 0.0
+  nu: 0.001
+train:
+  epochs: 30
+  lr: 0.001
+  weight_decay: 0.0001
+  seed: 43
+  device: auto
+  grad_clip: 1.0
+  run_dir: runs
+

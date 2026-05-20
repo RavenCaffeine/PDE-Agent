@@ -1,0 +1,32 @@
+task:
+  id: 3
+  name: task3_ks
+  input_steps: 20
+  total_steps: 400
+  spatial_size: 256
+data:
+  train_path: ../data/task3_data_sample_submission/train_val_test_init/KS_train.hdf5
+  val_path: ../data/task3_data_sample_submission/train_val_test_init/KS_val.hdf5
+  test_path: ../data/task3_data_sample_submission/train_val_test_init/KS_test.hdf5
+  batch_size: 4
+  num_workers: 0
+  max_train_samples: null
+  max_val_samples: null
+model:
+  hidden_channels: 96
+  modes: 48
+  depth: 6
+  dropout: 0.05
+loss:
+  spectral_weight: 0.05
+  physics_weight: 0.0
+  lambda2: 1.25
+train:
+  epochs: 30
+  lr: 0.0008
+  weight_decay: 0.0001
+  seed: 44
+  device: auto
+  grad_clip: 1.0
+  run_dir: runs
+

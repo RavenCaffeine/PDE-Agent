@@ -1,0 +1,32 @@
+task:
+  id: 1
+  name: task1_burgers_fixed
+  input_steps: 10
+  total_steps: 200
+  spatial_size: 256
+data:
+  train_path: ../data/task1_train.hdf5
+  val_path: ../data/task1_val.hdf5
+  test_path: ../data/task1_test.hdf5
+  batch_size: 8
+  num_workers: 0
+  max_train_samples: null
+  max_val_samples: null
+model:
+  hidden_channels: 64
+  modes: 32
+  depth: 4
+  dropout: 0.0
+loss:
+  spectral_weight: 0.02
+  physics_weight: 0.0
+  nu: 0.001
+train:
+  epochs: 20
+  lr: 0.001
+  weight_decay: 0.0001
+  seed: 42
+  device: auto
+  grad_clip: 1.0
+  run_dir: runs
+
